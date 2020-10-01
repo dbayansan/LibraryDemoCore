@@ -1,6 +1,7 @@
 ﻿using Library.Models.Catalog;
 using Library.Models.CheckoutModels;
 using LibraryData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Library.Controllers
 {
+    [Authorize]
     public class CatalogController : Controller
     {
         private ILibraryAsset _assets;

@@ -1,6 +1,7 @@
 ﻿using Library.Models.Patron;
 using LibraryData;
 using LibraryData.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Library.Controllers
 {
+    [Authorize]
     public class PatronController : Controller
     {
         private IPatron _patron;
